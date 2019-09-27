@@ -47,13 +47,6 @@ Considering encapsulations, this leads to
 
 until fit.
 
-In the `waterfall`_ *requirement-design-implementation-verification*,
-
-- each is in a separate *layers*,
-  dealing with different abstractions and contexts
-
-- each consists of ``pdt`` cycles, i.e. specifically with own *tests*.
-
 Development goes in cycles of varying size:
 
 - all of them are ``pdt``
@@ -63,21 +56,9 @@ Development goes in cycles of varying size:
 - system alternatives eventually end the *life cycle*
   with *deprecation*, *obsolescence* and *death/extinction*
 
-.. _`pdtcontinuity`:
-
-:Continuity:
-
-Continuity is very important.
-Every living species on earth is
-
-- the tip of more than 3 billion years of *continuous* development
-- an information channel through 3 billion years of changing environments
-
-The end of a system does not mean the end of its parts.
-What is part is just a question of perspective.
-But in general,
-for a system to get versatile (advanced),
-one needs to keep up the continuity of development.
+``pdt`` is general, including the *horizontal* `waterfall`_,
+but following `cohesion`_, *vertical* cycles, i.e. by topic, are preferred.
+``pdt`` is `agile`_.
 
 Plan
 ====
@@ -229,7 +210,7 @@ For a software project vertical groupings are
 
 .. _`pdtcycle`:
 
-:Cycle: `pdtevolution`_ `pdtcontinuity`_
+:Cycle: `pdtevolution`_
 
 *plan,do,test* is a **development cycle**.
 
@@ -303,6 +284,8 @@ Traditional methods derive from the link cost.
 - For Software, if the organizational responsibilities do not reflect the content structure,
   e.g. interface design by a separate organization,
   then `waterfall`_ is better than agile.
+
+Despite the name in `waterfall`_ each layer is stabilized separately, i.e. *horizontal* development.
 
 .. _`pdtprocessing`:
 
@@ -387,6 +370,25 @@ Why: The Repo
 - avoids construction of separate communication channels
 - avoids repeated interactions on costly link,
   especially between users and developers.
+
+.. _`pdtcontinuity`:
+
+:Continuity: `pdtinfrastructure`_
+
+Continuity is very important.
+Every living species on earth is
+
+- the tip of more than 3 billion years of *continuous* development
+- an information channel through 3 billion years of changing environments
+
+The end of a system does not mean the end of its parts.
+What is part is just a question of perspective.
+But in general,
+for a system to get versatile (advanced),
+one needs to keep up the continuity of development.
+
+*Continuity* asks for a stable *infrastructure*.
+
 
 Do
 ===
@@ -716,7 +718,8 @@ It should produce *feedback* and adaptations in this document.
 .. _`evolution`: https://rolandpuntaier.blogspot.com/2019/01/evolution.html
 .. _`Information`: http://rolandpuntaier.blogspot.com/2015/03/what-is-information.html
 .. _`lattices`: http://rolandpuntaier.blogspot.com/2015/06/fca.html
-.. _`maximum cohesion`: https://en.wikipedia.org/wiki/Cohesion_(computer_science)
+.. _`maximum cohesion`: `cohesion`_
+.. _`cohesion`: https://en.wikipedia.org/wiki/Cohesion_(computer_science)
 .. _`minimal coupling`: https://en.wikipedia.org/wiki/Coupling_(computer_programming)
 .. _`DRY`: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 .. _`DSL`: https://en.wikipedia.org/wiki/Domain-specific_language

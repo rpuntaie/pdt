@@ -411,6 +411,20 @@ Github/Gitlab/Butbucket/SourceForge support **issues**.
 - Issues are for feedback from the users.
 - ``pdt`` documents are used for development cycles that need more planning.
 
+*Project forking* dissipates effort.
+Repo maintainers need to react timely
+
+- on issues or
+- on pull requests
+
+to prevent *project forking*.
+
+*Repo forking* is part of normal development.
+Those without write access to the central repo,
+
+- work on their own forks and
+- contribute pull requests
+
 The source tree tries to stay flat. Example entries:
 
 - ``pdt``: for ``pdt`` enhancements cycle, each in an ``AAA`` subdir

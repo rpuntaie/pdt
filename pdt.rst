@@ -528,6 +528,7 @@ The necessary fields are
 
 pdt status:
 
+- **drafting** - work in progress
 - **draft** - initial state until discussed and/or implemented and tested
 - **final** - consistent with the rest of the repo or agreed upon
 - **replaced** - for a conflicting change a new ``pdt`` replaces a *final* one

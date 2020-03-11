@@ -443,7 +443,7 @@ The ``build`` tree is outside of the repo tree.
 
 :Development Documentation: `pdtcontent`_
 
-`rstdoc`_ is used to a have
+`rstdoc`_ is used to have
 
 - all information as hyperlinked text
 - documentation as python code (``.stpl``)
@@ -462,6 +462,7 @@ The ``build`` tree is outside of the repo tree.
 - The repo has a top level folder for ``pdt``'s (optionally named ``pdt``)
 - Every cycle gets an ``AAA`` folder below ``pdt``, e.g. ``011``.
   Usage of base36, .i.e ``0-9A-Z``, keeps the UID short.
+  Depending on the project size the actual length can be less the 3.
 - A normal cycle has 4 documents below ``AAA``: 
 
   - ``i.rest.stpl``
@@ -470,6 +471,14 @@ The ``build`` tree is outside of the repo tree.
   - ``t.rest.stpl``
 
 - Informational entries have only an ``i`` document (`pdttype`_).
+
+.. note:: ipdt = 0123
+
+   To have the files in order and since the sequence is so obvious
+
+   - intead of ``ipdt`` one could use ``0123``
+
+   for the file names.
 
 Project-relevant content is in paragraphs with a
 project-wide **unique** ID::
@@ -528,7 +537,7 @@ The necessary fields are
 
 pdt status:
 
-- **drafting** - work in progress
+- **sandbox** - work in progress
 - **draft** - initial state until discussed and/or implemented and tested
 - **final** - consistent with the rest of the repo or agreed upon
 - **replaced** - for a conflicting change a new ``pdt`` replaces a *final* one
@@ -714,8 +723,9 @@ Test
 ====
 
 This document is informative.
-
-I reused the ``inform-plan-do-test`` structuring to separate
+It does not need testing.
+I just reused the ``inform-plan-do-test`` structuring for this document
+to separate
 
 - abstract motivation (``plan``) and
 - more concrete guidelines (``do``) and
@@ -723,6 +733,20 @@ I reused the ``inform-plan-do-test`` structuring to separate
 
 The test is given by the application of these guidelines.
 It should produce *feedback* and adaptations in this document.
+
+In actual applications of the ``ipdt`` scheme,
+the test consists in checking that ``plan`` and ``do`` fit together.
+
+In simple cases, i.e.
+if the ``do`` does not add more detail, but has the same description as the ``plan``,
+then this description
+
+- can just have a ``todo`` flag
+- that becomes a ``done`` flag
+- at the ``test``
+
+In such case ``ipdt`` files are not needed,
+but the idea of ``plan-do-test`` is still there.
 
 
 .. _`waterfall`: https://en.wikipedia.org/wiki/Waterfall_model

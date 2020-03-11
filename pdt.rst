@@ -747,6 +747,10 @@ then this description
 
 In such case ``ipdt`` files are not needed,
 but the idea of ``plan-do-test`` is still there.
+Such simple items can be collected under one ``pdt`` folder.
+
+Note that *bugs* sometimes entail big changes that need planning,
+and are not just *todo* items.
 
 
 .. _`waterfall`: https://en.wikipedia.org/wiki/Waterfall_model

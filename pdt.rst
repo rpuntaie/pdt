@@ -109,7 +109,7 @@ We concentrate on the content topology.
 
 :Development: `pdtevolution`_
 
-With shorter and less roman wording,
+With shorter and less Roman wording,
 evolution consists of *make-test* steps.
 
 - *creation-selection* = *make-test*
@@ -465,10 +465,10 @@ The ``build`` tree is outside of the repo tree.
   Depending on the project size the actual length can be less the 3.
 - A normal cycle has 4 documents below ``AAA``: 
 
-  - ``i.rest.stpl``
-  - ``p.rest.stpl``
-  - ``d.rest.stpl``
-  - ``t.rest.stpl``
+  - ``i.rest.stpl`` or ``0.rest.stpl``
+  - ``p.rest.stpl`` or ``1.rest.stpl``
+  - ``d.rest.stpl`` or ``2.rest.stpl``
+  - ``t.rest.stpl`` or ``3.rest.stpl``
 
 - Informational entries have only an ``i`` document (`pdttype`_).
 

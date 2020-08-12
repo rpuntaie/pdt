@@ -18,15 +18,7 @@ Inform
 
 :Tradition:
 
-`rstdoc`_ uses documents like
-
-- (risk) analysis (ra)
-- system requirements (sr)
-- detailed design (dd)
-- test plan (tp)
-
-Similar documents based on
-the `waterfall`_
+`Waterfall`_ documents including
 *requirement-design-implementation-verification*
 are quite common.
 
@@ -443,14 +435,14 @@ The ``build`` tree is outside of the repo tree.
 
 :Development Documentation: `pdtcontent`_
 
-`rstdoc`_ is used to have
+We try to have
 
 - all information as hyperlinked text
 - documentation as python code (``.stpl``)
 - support of many graphic DSLs
 - convertibility to many other formats
 
-**Documentation as code** allows to
+*Documentation as code* allows to
 
 - generate documentation from different sources
   (code, system documentation, development documentation)
@@ -487,30 +479,33 @@ project-wide **unique** ID::
 
 with ``A,B`` base36 and ``x∈{i,p,d,t}``.
 
-See the sample project generated with ``rstdoc --ipdt tmpipdt``.
+.. note:: rstdoc
 
-A document looks like this:
+  ``pdt`` is integrated in `rstdoc`_.
+  See the sample project generated with ``rstdoc --ipdt tmpipdt``.
 
-| ``.. _`i001`:``
-|
-| ``%globals().update(include('pdt.rst.tpl'``
-| ``%,Title="Development Process"``
-| ``%,Type="inform"``
-| ``%))``
-|
-| ``.. _`i001header`:``
-| ``%__i001_('header')``
-|
-| ``.. _`i001keywords`:``
-| ``%__i001('key words')``
-|
-| ``Item content.``
+  A document could look like this:
 
-``__i001()`` numbers the ``BB`` part.
-Reference to items between RST documents is done with ``|i001keywords|``.
-Reference targets are not generated
-to allow `rstdoc`_ to create ``.tags``
-that point to the ``.rest.stpl`` instead of the ``.rest``.
+  | ``.. _`i001`:``
+  |
+  | ``%globals().update(include('pdt.rst.tpl'``
+  | ``%,Title="Development Process"``
+  | ``%,Type="inform"``
+  | ``%))``
+  |
+  | ``.. _`i001header`:``
+  | ``%__i001_('header')``
+  |
+  | ``.. _`i001keywords`:``
+  | ``%__i001('key words')``
+  |
+  | ``Item content.``
+
+  In ``__i001()``, `001` is the fix AAA, and the function automatically numbers the ``BB`` part.
+  There is no need to have 3 digit/letters.
+  Reference to items between RST documents is done with ``|i001keywords|``.
+  Reference targets are not generated to allow `rstdoc`_ to create ``.tags``
+  that point to the ``.rest.stpl`` instead of the ``.rest``.
 
 .. _`pdtinform`:
 

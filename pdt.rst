@@ -457,10 +457,10 @@ We try to have
   Depending on the project size the actual length can be less the 3.
 - A normal cycle has 4 documents below ``AAA``: 
 
-  - ``i.rest.stpl`` or ``0.rest.stpl``
-  - ``p.rest.stpl`` or ``1.rest.stpl``
-  - ``d.rest.stpl`` or ``2.rest.stpl``
-  - ``t.rest.stpl`` or ``3.rest.stpl``
+  - ``i.rst.stpl`` or ``0.rst.stpl``
+  - ``p.rst.stpl`` or ``1.rst.stpl``
+  - ``d.rst.stpl`` or ``2.rst.stpl``
+  - ``t.rst.stpl`` or ``3.rst.stpl``
 
 - Informational entries have only an ``i`` document (`pdttype`_).
 
@@ -479,12 +479,16 @@ project-wide **unique** ID::
 
 with ``A,B`` base36 and ``x∈{i,p,d,t}``.
 
+``BB`` can be random without implying order (preferred)
+or automatically generated.
+Files generated from ``.stpl`` are placed into the same folder
+and can be rendered by github/gitlab.
+
 .. note:: rstdoc
 
-  ``pdt`` is integrated in `rstdoc`_.
-  See the sample project generated with ``rstdoc --ipdt tmpipdt``.
+  `rstdoc`_ has a sample project generated with ``rstdoc --ipdt tmpipdt``.
 
-  A document could look like this:
+  The documents have functions for automatic numbering of items:
 
   | ``.. _`i001`:``
   |
@@ -505,11 +509,12 @@ with ``A,B`` base36 and ``x∈{i,p,d,t}``.
   There is no need to have 3 digit/letters.
   Reference to items between RST documents is done with ``|i001keywords|``.
   Reference targets are not generated to allow `rstdoc`_ to create ``.tags``
-  that point to the ``.rest.stpl`` instead of the ``.rest``.
+  that point to the ``.rst.stpl`` instead of the ``.rst``.
+
 
 .. _`pdtinform`:
 
-``i.rest.stpl`` contains
+``i.rst.stpl`` contains
 
 - ``pdt`` fields (`pdtfields`_)
 - a short non-technical introduction to the context (problem, goal, purpose).

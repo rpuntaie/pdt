@@ -683,6 +683,15 @@ As tests finalize a cycle, they are also responsible for **consistency**.
 Test items link to ``plan`` and ``do`` items,
 and state that their consistency has been checked.
 
+.. note:: consistency
+
+   Code and their tests are kept consistent by a test run on every code change.
+   Human language texts and source code on the other hand normally get inconsistent.
+   It is easier to keep them consistent if the human text is close to the source code
+   or easily reachable by a hyperlink.
+   Initial development documentation like the plan
+   do not necessarily need to be made consistent.
+
 Traceability: With separate files for ``inform``, ``plan``, ``do`` and ``test``,
 the content items get marked as such.
 This can be used to automatically check

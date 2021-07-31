@@ -33,7 +33,7 @@ have surfaced, for a reason.
 A general approach starts from the `evolutionary`_ *mutation-selection*.
 Considering encapsulations, this leads to
 
-- plan
+- plan (= internal do-test)
 - do
 - test
 
